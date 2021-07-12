@@ -1,0 +1,54 @@
+// Reseting and values to begin with:
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include media-query(tablet-portrait) {
+    font-size: 50%;
+  }
+  @include media-query(tablet-landscape) {
+    font-size: 56.25%;
+  }
+  @include media-query(big-screen) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  // font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-light;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @include media-query(tablet-landscape) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: orange;
+  color: white;
+  font-weight: 700;
+}
+
+/*
+@include media-query(phone) {
+}
+@include media-query(tablet-portrait) {
+}
+@include media-query(tablet-landscape) {
+}
+@include media-query(big-screen) {
+}
+
+*/

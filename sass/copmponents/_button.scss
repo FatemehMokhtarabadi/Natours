@@ -1,0 +1,64 @@
+//Buttons
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 400ms;
+  padding: 1.5rem 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-15px);
+  box-shadow: 0 0.5rem 1rem rgba($color-grey-dark, 0.8);
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba($color-grey-dark, 0.8);
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: $color-grey-light;
+  border-radius: 10rem;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-fontSize;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid $color-primary-light;
+    padding: 3px;
+    transition: all 400ms;
+    text-transform: uppercase;
+    word-spacing: 5px;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-white;
+    box-shadow: 0 10px 25px rgba($color-grey-light, 0.15);
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: 0 5px 16px rgba($color-grey-light, 0.15);
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .btn--white {
+    padding: 10px 25px;
+  }
+}
