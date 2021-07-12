@@ -16,8 +16,8 @@
     box-shadow: 0 1rem 5rem rgba($color-black, 0.1);
 
     @include media-query(tablet-portrait) {
-      top: 2rem;
-      right: 2rem;
+      top: 1.5rem;
+      right: 1.5rem;
     }
 
     @include media-query(phone) {
@@ -89,6 +89,12 @@
       $color-white 50%
     );
     background-size: 700%;
+
+    @include media-query(tablet-portrait) {
+      font-size: 2rem;
+      // font-weight: 700;
+      padding: 0.75rem;
+    }
 
     &:hover,
     &:active {
